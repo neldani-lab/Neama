@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my form</title>
+    <style>
+    /* تعيين خصائص الجسم بشكل عام */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #fcf4fb;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* تنسيق الفورم */
+    form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* تنسيق الحقول */
+    fieldset {
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    legend {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #5a5a5a;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 1em;
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="file"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 1em;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    input[type="password"]:focus,
+    input[type="file"]:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    /* تنسيق زر الإرسال */
+    button[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #2980b9;
+    }
+
+    /* جعل الإدخالات تبدو مرتبة وجميلة */
+    input[type="file"] {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    /* تنسيق خاص لتحديد الحافة في حالة وجود خطأ */
+    input:invalid {
+        border-color: red;
+    }
+</style>
+
+    
+</head>
+<body>
+    <h1>sign in a new user</h1>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>accuont data</legend>
+
+            <lable  for="user name ">user name</lable>
+            <input type="text" id="user name" name="user name" placeholder="Enter user name" required autofocus><br><br>
+
+            <lable  for="email ">user email</lable>
+            <input type="email" id="email" name="user email" placeholder="example@mail.com" required autofocus><br><br>
+
+            <lable  for="password ">password</lable>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required autofocus><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>personal data</legend>
+            <lable for="age ">your age </lable> 
+            <input type="number" id="number" name="age" required autofocus><br><br>
+
+            <lable for="photo">personal photo</lable>
+            <input type="file" id="photo" name="photo" required autofocus><br><br>
+
+            <button type="submit"> send</button>
+
+        </fieldset>
+    </form>
+</body>
+</html>
